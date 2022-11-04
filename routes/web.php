@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*練習 1-6 更改routes*/
-Route::get('home', function () {
-    return view('home.index');
-});
+/*練習 1-8  改用controller回傳*/
+Route::get('home', [HomeController::class,'index'])
+    ->name('home.index');
