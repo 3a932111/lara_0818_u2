@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*練習 1-2 設定回傳home*/
+/*練習 1-6 更改routes*/
 Route::get('home', function () {
-    return view('home');
+    return view('home.index');
 });
